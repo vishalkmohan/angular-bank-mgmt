@@ -1,0 +1,71 @@
+
+.menubar{
+	background-color:rgb(245,130,31);
+	color:white;
+	padding-left: 15%;
+	height: 55px;
+}
+.navbar-inverse .navbar-nav>li>a{
+	color:white;
+	font-size: 1.2em;
+}
+.nav-search{
+	margin-top: 3%;
+	width: 250px;
+	height: 33px;
+}
+
+.vertical-text {
+	position:absolute;
+	padding-top: 5.5%;
+	margin-top: 3.3%;
+	transform: rotate(90deg);
+	font-size: 28px;
+	font-family: Arial;
+	color: #3366ff;
+}
+
+.vertical-text-logo {
+	position:absolute;
+	padding-top: 1.5%;
+	margin-top: 1%;
+	transform: rotate(90deg);
+	font-size: 28px;
+	font-family: Arial;
+	color: #3366ff;
+}
+
+.note-panel{
+	margin-top: 18px;
+	background-color:rgb(245,130,31);
+}
+.note-text{
+	font-weight: 700;
+}
+.note-move{
+	font-weight: 600;
+}
+.btn-warning{
+	background-color:rgb(245,130,31);
+	padding-top: 1%;
+	padding-bottom: 1%;	
+}
+
+.transfer-box{
+	background-color:rgb(245,130,31);
+	color:white;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	margin-left: 30%
+}
+
+.fund-transfer-form  td {
+	width: 300px;
+}
+.fund-transfer-form{
+	margin-left: 20%;
+}
+
+
+

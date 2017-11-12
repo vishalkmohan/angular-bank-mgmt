@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>iDiDi Bank</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+  <img src="ididibank.png">
+  <span class="vertical-text-logo">BANK</span>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid menubar">
+    <ul class="nav navbar-nav">
+      <li><a href="accountdetails.html">My Accounts</a></li>
+      <li><a href="transfer.html">Payments & Transfer</a></li>
+      <li><a href="#">Wealth</a></li>
+      <li><a href="#">Private</a></li>
+      <li><a href="#">NRI</a></li>
+      <li><a href="#">Corporate</a></li>
+      <li><a href="#">Business</a></li>
+      <li><input class="nav-search" type="text" name="search"></li>
+      <li><a href="#">About us</a></li>
+    </ul>
+  </div>
+</nav>
+  
+  
+<div class="container">
+<h3 style="color:rgb(245,130,31);"">Fund Transfer</h3>
+    <div class="panel panel-default">    
+      <div class="panel-heading"><b>Your linked ICICI Bank account / Pockets wallet</b></div>
+      <div class="panel-body">
+      <span style="font-size: 120%;">
+         <table class="fund-transfer-form">
+          <tr><td>Beneficiary Type </td><td>NEFT</td></tr>
+          <tr><td>Beneficiary Account No. </td><td><input type="text" name="accno"></td></tr>
+          <tr><td>Re-enter Beneficiary Account No. </td><td><input type="text" name="reaccno"></td></tr>
+          <tr><td>Beneficiary Account Type </td><td>
+            <select>
+              <option>Savings</option>
+              <option>Current</option>
+            </select>
+          </td></tr>
+          <tr><td>IFSC Code </td><td><input type="text" name="ifsc"></td></tr>
+          <tr><td>Beneficiary Name </td><td><input type="text" name="name"></td></tr>
+          <tr><td>Email ID </td><td><input type="text" name="email"></td></tr>
+        </table>
+        <a style="margin-left: 35%; margin-top:3px;" type="button" href="transferformview.html" class="btn btn-warning">TRANSFER</a>
+      </span>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
