@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule,Router } from '@angular/router'
+import { RouteConfig} from './app.router'
 
 
 import { AppComponent } from './app.component';
@@ -14,17 +14,6 @@ import { TransferComponent } from './transfer/transfer.component';
 import { PaymemtsuccessComponent } from './paymemtsuccess/paymemtsuccess.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
-const appRouter:Router = [
-    {path:'home',component:HomeComponent},
-    {path:'login',component:LoginComponent},
-    {path:'accountdetails',component:BankaccountComponent},
-    {path:'bankstatement',component:BankstatementComponent},
-    {path:'payments',component:PaymentsComponent},
-    {path:'transfer',component:FundtransferComponent },
-    {path:'success',component:PaymemtsuccessComponent },
-    {path:'', redirectTo:'/home', pathMatch: 'full'},
-    {path:'**', component:PagenotfoundComponent }
-  ];
 
 @NgModule({
   declarations: [
@@ -41,7 +30,7 @@ const appRouter:Router = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRouter)
+    RouteConfig
   ],
   providers: [],
   bootstrap: [AppComponent]
