@@ -16,6 +16,7 @@ import { PaymemtsuccessComponent } from './paymemtsuccess/paymemtsuccess.compone
 const appRouter:Router = [
     {path:'home',component:HomeComponent},
     {path:'login',component:LoginComponent},
+     {path:'accountdetails',component:BankaccountComponent},
     {path:'**', redirectTo:'/home'}
   ];
 
