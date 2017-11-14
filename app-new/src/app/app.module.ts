@@ -18,6 +18,7 @@ const appRouter:Router = [
     {path:'login',component:LoginComponent},
     {path:'accountdetails',component:BankaccountComponent},
     {path:'bankstatement',component:BankstatementComponent},
+    {path:'payments',component:PaymentsComponent},
     {path:'**', redirectTo:'/home'}
   ];
 
