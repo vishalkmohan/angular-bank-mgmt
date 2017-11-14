@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule,Router } from '@angular/router'
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,10 @@ import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 import { TransferComponent } from './transfer/transfer.component';
 import { PaymemtsuccessComponent } from './paymemtsuccess/paymemtsuccess.component';
 
+const appRouter:Router = [
+    {path:'home',component:HomeComponent},
+    {path:'**', redirectTo:'/home'}
+  ];
 
 @NgModule({
   declarations: [
@@ -26,9 +31,12 @@ import { PaymemtsuccessComponent } from './paymemtsuccess/paymemtsuccess.compone
     PaymemtsuccessComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRouter)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
