@@ -20,7 +20,9 @@ const appRouter:Router = [
     {path:'bankstatement',component:BankstatementComponent},
     {path:'payments',component:PaymentsComponent},
     {path:'transfer',component:FundtransferComponent },
-    {path:'**', redirectTo:'/home'}
+    {path:'success',component:PaymemtsuccessComponent },
+    {path:'', redirectTo:'/home', pathMatch: 'full'},
+    {path:'**', component:PaymemtsuccessComponent }
   ];
 
 @NgModule({
