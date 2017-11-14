@@ -12,6 +12,7 @@ import { PaymentsComponent } from './payments/payments.component';
 import { FundtransferComponent } from './fundtransfer/fundtransfer.component';
 import { TransferComponent } from './transfer/transfer.component';
 import { PaymemtsuccessComponent } from './paymemtsuccess/paymemtsuccess.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const appRouter:Router = [
     {path:'home',component:HomeComponent},
@@ -22,7 +23,7 @@ const appRouter:Router = [
     {path:'transfer',component:FundtransferComponent },
     {path:'success',component:PaymemtsuccessComponent },
     {path:'', redirectTo:'/home', pathMatch: 'full'},
-    {path:'**', component:PaymemtsuccessComponent }
+    {path:'**', component:PagenotfoundComponent }
   ];
 
 @NgModule({
@@ -35,7 +36,8 @@ const appRouter:Router = [
     PaymentsComponent,
     FundtransferComponent,
     TransferComponent,
-    PaymemtsuccessComponent
+    PaymemtsuccessComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
