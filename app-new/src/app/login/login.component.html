@@ -26,17 +26,17 @@
     <div class="panel-heading"><b>Login to Internet Banking</b></div>
     <div class="panel-body">
       
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)"  >
     <div >
       <div class="input-group" >
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input id="email" type="text" class="form-control" name="email" placeholder="User ID">
+        <input id="userid" type="text" class="form-control" name="userid" formControlName="userid" placeholder="User ID">
       </div>
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-        <input id="password" type="password" class="form-control" name="password" placeholder="Password">       
+        <input id="password" type="password" class="form-control" name="password" formControlName="password" placeholder="Password">       
       </div>
-       <button style="margin-left: 1px; margin-top:3px;" type="button" routerLink="/accountdetails" class="btn btn-warning" >LOGIN</button>
+       <input style="margin-left: 1px; margin-top:3px;" type="submit"  class="btn btn-warning" value="LOGIN" />
       <br>
       </div>
   </form>
