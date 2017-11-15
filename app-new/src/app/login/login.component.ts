@@ -13,6 +13,8 @@ export class LoginComponent implements OnInit {
   constructor(private router:Router) { }
 
   private loginForm:FormGroup;
+
+  private errors:string=null;
   
   ngOnInit() {
   	 this.loginForm=new FormGroup({
@@ -25,8 +27,11 @@ export class LoginComponent implements OnInit {
   login = function(loginDeatils){
  	 	console.log("User Deatails : "+loginDeatils.userid +":"+loginDeatils.password);
  	 	if(loginDeatils.userid == "superuser" && loginDeatils.password == "superuser1"){
- 	 		console.log("Login Success....")
+ 	 		console.log("Login Success....");
  	 		this.router.navigateByUrl('/accountdetails');
+ 	 	} else {
+ 	 		console.log("Login Failed....");
+ 	 		this.errors="Unable to authendicate. Please try again.";
  	 	}
   }
 

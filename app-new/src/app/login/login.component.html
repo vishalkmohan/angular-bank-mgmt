@@ -25,6 +25,10 @@
   <div class="panel panel-default">
     <div class="panel-heading"><b>Login to Internet Banking</b></div>
     <div class="panel-body">
+
+    <div *ngIf="errors" class="alert alert-danger"> 
+       {{ errors }} 
+    </div>
       
     <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)"  >
     <div >
