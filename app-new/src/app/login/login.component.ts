@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,10 @@ import { FormGroup,FormControl } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   private loginForm:FormGroup;
+  
   ngOnInit() {
   	 this.loginForm=new FormGroup({
 		 	userid: new FormControl(),
@@ -22,6 +24,10 @@ export class LoginComponent implements OnInit {
 
   login = function(loginDeatils){
  	 	console.log("User Deatails : "+loginDeatils.userid +":"+loginDeatils.password);
+ 	 	if(loginDeatils.userid == "superuser" && loginDeatils.password == "superuser1"){
+ 	 		console.log("Login Success....")
+ 	 		this.router.navigateByUrl('/accountdetails');
+ 	 	}
   }
 
 }
