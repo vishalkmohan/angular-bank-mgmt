@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { FormGroup,FormControl } from '@angular/forms';
+import { FormGroup,FormControl,Validators } from '@angular/forms';
 import {Router} from '@angular/router';
 
 @Component({
@@ -18,8 +18,8 @@ export class LoginComponent implements OnInit {
   
   ngOnInit() {
   	 this.loginForm=new FormGroup({
-		 	userid: new FormControl(),
-		 	password: new FormControl()
+		 	userid: new FormControl("",Validators.required),
+		 	password: new FormControl("",Validators.required)
 		 });
   }
 

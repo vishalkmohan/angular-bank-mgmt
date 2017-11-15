@@ -29,18 +29,22 @@
     <div *ngIf="errors" class="alert alert-danger"> 
        {{ errors }} 
     </div>
+
+   <!-- <div *ngIf="!loginForm.controls.userid.valid" class="alert alert-danger"> 
+       Invalid User Id. 
+    </div> -->
       
     <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)"  >
     <div >
       <div class="input-group" >
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input id="userid" type="text" class="form-control" name="userid" formControlName="userid" placeholder="User ID">
+        <input id="userid" type="text" class="form-control" name="userid" formControlName="userid" placeholder="User ID"> 
       </div>
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
         <input id="password" type="password" class="form-control" name="password" formControlName="password" placeholder="Password">       
       </div>
-       <input style="margin-left: 1px; margin-top:3px;" type="submit"  class="btn btn-warning" value="LOGIN" />
+       <input style="margin-left: 1px; margin-top:3px;" type="submit" [disabled]="!loginForm.valid"  class="btn btn-warning" value="LOGIN" />
       <br>
       </div>
   </form>
