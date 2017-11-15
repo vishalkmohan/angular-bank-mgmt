@@ -39,6 +39,12 @@
       <div class="input-group" >
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         <input id="userid" type="text" class="form-control" name="userid" formControlName="userid" placeholder="User ID"> 
+        <div *ngIf="loginForm.get('userid').hasError('maxlength') && loginForm.get('userid').dirty" class="error">
+            You have entered an Invalid User ID.
+        </div>
+        <div *ngIf="loginForm.get('userid').hasError('required') && loginForm.get('userid').dirty" class="error">
+            Please enter User ID.
+        </div>
       </div>
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
