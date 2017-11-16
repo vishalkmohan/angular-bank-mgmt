@@ -7,8 +7,13 @@ npm install gulp --save-dev
 npm install --save-dev gulp-war
 npm install --save-dev gulp-zip
 
+steps:
+======
 create gulpfile.js 
+-add war task
+
 
 command
 ========
+=>ng buld --prod
 => gulp war 
