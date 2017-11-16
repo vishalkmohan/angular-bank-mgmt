@@ -34,6 +34,9 @@ export class LoginComponent implements OnInit {
  	 	console.log("User Deatails : "+loginDeatils.userid +":"+loginDeatils.password);
  	 	if(loginDeatils.userid == "superuser" && loginDeatils.password == "superuser1"){
  	 		console.log("Login Success....");
+       localStorage.setItem('authtoken', JSON.stringify({ token: "ywt36weF76767wewe", name: "bala" }));
+
+
  	 		this.router.navigateByUrl('/accountdetails');
  	 	} else {
  	 		console.log("Login Failed....");
