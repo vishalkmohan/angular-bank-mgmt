@@ -25,23 +25,25 @@
     <div class="panel panel-default">    
       <div class="panel-heading"><b>Your linked ICICI Bank account / Pockets wallet</b></div>
       <div class="panel-body">
-      <span style="font-size: 120%;">
+      <form [formGroup]="transferForm" (ngSubmit)="transfer(transferForm.value)">
+      <span style="font-size: 120%;">      
          <table class="fund-transfer-form">
           <tr><td>Beneficiary Type </td><td>NEFT</td></tr>
-          <tr><td>Beneficiary Account No. </td><td><input type="text" name="accno"></td></tr>
-          <tr><td>Re-enter Beneficiary Account No. </td><td><input type="text" name="reaccno"></td></tr>
+          <tr><td>Beneficiary Account No. </td><td><input type="text" name="accno" placeholder="Account No." formControlName="accno"></td></tr>
+          <tr><td>Re-enter Beneficiary Account No. </td><td><input type="text" name="reaccno" placeholder="Account No." formControlName="reaccno" ></td></tr>
           <tr><td>Beneficiary Account Type </td><td>
-            <select>
+            <select formControlName="acctype" name="acctype">
               <option>Savings</option>
               <option>Current</option>
             </select>
           </td></tr>
-          <tr><td>IFSC Code </td><td><input type="text" name="ifsc"></td></tr>
-          <tr><td>Beneficiary Name </td><td><input type="text" name="name"></td></tr>
-          <tr><td>Email ID </td><td><input type="text" name="email"></td></tr>
+          <tr><td>IFSC Code </td><td><input type="text" name="ifsc" placeholder="IFSC" formControlName="ifsc" ></td></tr>
+          <tr><td>Beneficiary Name </td><td><input type="text" name="name" placeholder="Name" formControlName="name" ></td></tr>
+          <tr><td>Email ID </td><td><input type="text" name="email" placeholder="Email" formControlName="email" ></td></tr>
         </table>
-        <a style="margin-left: 35%; margin-top:3px;" type="button" href="/success" class="btn btn-warning">TRANSFER</a>
+        <input type="submit" value="TRANSFER" style="margin-left: 35%; margin-top:3px;" [disabled]="!transferForm.valid" class="btn btn-warning">
       </span>
+      </form>
       </div>
     </div>
   </div>
