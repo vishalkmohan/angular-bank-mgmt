@@ -28,7 +28,7 @@ export class FundtransferComponent implements OnInit {
 
   transfer=function(transferDeatils){
   	console.log(transferDeatils.accno);
-  	this.router.navigateByUrl('/success');
+  	this.router.navigateByUrl('/transferview');
   }
 
 }
