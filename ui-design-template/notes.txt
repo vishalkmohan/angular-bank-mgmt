@@ -1,0 +1,14 @@
+
+
+war:
+https://www.npmjs.com/package/gulp-war
+
+npm install gulp --save-dev 
+npm install --save-dev gulp-war
+npm install --save-dev gulp-zip
+
+create gulpfile.js 
+
+command
+========
+=> gulp war 

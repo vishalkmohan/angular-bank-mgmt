@@ -14,7 +14,7 @@ export class FundtransferComponent implements OnInit, OnDestroy {
 
   constructor(private router:Router,public paymentService:FundTransferServiceService) { }
 
-  private transferForm:FormGroup;
+  public transferForm:FormGroup;
 
   payment:Payment=this.paymentService.payment ;
 

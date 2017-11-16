@@ -12,9 +12,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private router:Router) { }
 
-  private loginForm:FormGroup;
+  public loginForm:FormGroup;
 
-  private errors:string=null;
+  public errors:string=null;
   
   textValidator(control){
     if(control.value.length<5){
