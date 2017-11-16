@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-transfer',
@@ -8,9 +9,21 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class TransferComponent implements OnInit {
 
-  constructor() { }
+
+  accno:string;
+  acctype:string="hiii";
+  ifsc:string="hiii";
+  name:string="hiii";
+  email:string="hiii";
+
+  sub:any;
+
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+  	this.sub = this.route.params.subscribe(params => {
+       this.accno = params['accno']; 
+    });
   }
 
 }

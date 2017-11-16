@@ -20,7 +20,7 @@ export const routes : Routes = [
 	    {path:'payments',component:PaymentsComponent},
 	    {path:'transfer',component:FundtransferComponent },
 	    {path:'success',component:PaymemtsuccessComponent },
-	    {path:'transferview',component:TransferComponent },
+	    {path:'transferview/:accno',component:TransferComponent },
 	    {path:'', redirectTo:'/home', pathMatch: 'full'},
 	    {path:'**', component:PagenotfoundComponent }
 	  ];
