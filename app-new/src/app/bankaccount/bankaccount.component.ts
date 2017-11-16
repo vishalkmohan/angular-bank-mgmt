@@ -12,11 +12,18 @@ export class BankaccountComponent implements OnInit {
 
   ngOnInit() {
   	//local storage retrival
-  	let authtoken = JSON.parse(localStorage.getItem('authtoken'));
-	let token = authtoken.token; // your token
-	let name = authtoken.name;
+  	let authtokenLocal = JSON.parse(localStorage.getItem('authtoken'));
+	let tokenLocal = authtokenLocal.token; // your token
+	let nameLocal = authtokenLocal.name;
+	console.log("Local Storage - Auth Token:"+tokenLocal + " - "+nameLocal);
 
-	console.log("Auth Token:"+token + " - "+name);
+	//session storage retrival
+	let authtokenSession = JSON.parse(sessionStorage.getItem('authtoken'));
+	let tokenSession = authtokenSession.token; // your token
+	let nameSession = authtokenSession.name;
+	console.log("Session Storage - Auth Token:"+tokenSession + " - "+nameSession);
+
+
 
   }
 
