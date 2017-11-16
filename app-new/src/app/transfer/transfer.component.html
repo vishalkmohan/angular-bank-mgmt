@@ -28,13 +28,13 @@
       <span style="font-size: 120%;">
          <table class="fund-transfer-form">
           <tr><td>Beneficiary Type </td><td>NEFT</td></tr>
-          <tr><td>Beneficiary Account No. </td><td>{{accno}}</td></tr>
+          <tr><td>Beneficiary Account No. </td><td>{{paymentService.payment.accno}}</td></tr>
           <tr><td>Beneficiary Account Type </td><td>{{paymentService.payment.acctype}}</td></tr>
           <tr><td>IFSC Code </td><td>{{paymentService.payment.ifsc}}</td></tr>
           <tr><td>Beneficiary Name </td><td>{{paymentService.payment.name}}</td></tr>
           <tr><td>Email ID </td><td>{{paymentService.payment.email}}</td></tr>
         </table>
-        <a style="margin-left: 35%; margin-top:3px;" type="button" routerLink="/success" class="btn btn-warning">TRANSFER</a>
+        <button style="margin-left: 35%; margin-top:3px;" type="button" (click)="submitPayment()" class="btn btn-warning">TRANSFER</button>
       </span>
       </div>
     </div>

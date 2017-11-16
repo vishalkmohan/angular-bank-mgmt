@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-paymemtsuccess',
@@ -8,9 +9,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class PaymemtsuccessComponent implements OnInit {
 
-  constructor() { }
+  transactionId:string;
+  sub:any;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+  	this.sub = this.route.params.subscribe(params => {
+       this.transactionId = params['transactionId']; 
+    });
   }
 
 }

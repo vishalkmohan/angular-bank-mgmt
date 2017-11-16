@@ -34,7 +34,7 @@ export class FundtransferComponent implements OnInit, OnDestroy {
   transfer=function(transferDeatils){
   	console.log(this.transferForm.value);
     this.paymentService.payment = this.transferForm.value; //setting values to service to trrive in another component 
-  	this.router.navigate(['/transferview', transferDeatils.accno]);
+  	this.router.navigateByUrl('/transferview');
   }
 
   ngOnDestroy() {

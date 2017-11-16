@@ -19,8 +19,8 @@ export const routes : Routes = [
 	    {path:'bankstatement',component:BankstatementComponent},
 	    {path:'payments',component:PaymentsComponent},
 	    {path:'transfer',component:FundtransferComponent },
-	    {path:'success',component:PaymemtsuccessComponent },
-	    {path:'transferview/:accno',component:TransferComponent },
+	    {path:'success/:transactionId',component:PaymemtsuccessComponent },
+	    {path:'transferview',component:TransferComponent },
 	    {path:'', redirectTo:'/home', pathMatch: 'full'},
 	    {path:'**', component:PagenotfoundComponent }
 	  ];

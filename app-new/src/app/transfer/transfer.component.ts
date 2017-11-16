@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute ,Router} from '@angular/router';
 import { FundTransferServiceService } from './../fund-transfer-service.service';
 
 @Component({
@@ -8,20 +8,16 @@ import { FundTransferServiceService } from './../fund-transfer-service.service';
   styleUrls: ['./transfer.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class TransferComponent implements OnInit {
-
+export class TransferComponent {
 
   accno:string;
   sub:any;
+  transactionId:string="TRN1111";  
 
-  
+  constructor(public paymentService:FundTransferServiceService,private urlRouter:Router) { }  
 
-  constructor(private route: ActivatedRoute,public paymentService:FundTransferServiceService) { }
-
-  ngOnInit() {
-  	this.sub = this.route.params.subscribe(params => {
-       this.accno = params['accno']; 
-    });
+  submitPayment=function(){    
+    this.urlRouter.navigate(['/success', this.transactionId]);
   }
 
 }

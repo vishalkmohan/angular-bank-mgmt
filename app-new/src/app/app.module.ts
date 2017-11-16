@@ -4,6 +4,7 @@ import { RouteConfig} from './app.router';
  import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { RouterModule, Router }   from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -40,6 +41,13 @@ import { FundTransferServiceService } from './fund-transfer-service.service';
   providers: [ FundTransferServiceService ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private router: Router) {
+    router.events.subscribe((val) => {
+        // see also 
+        console.log(val) 
+    });
+    }
+ }
 
 
