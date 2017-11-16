@@ -16,6 +16,8 @@ import { TransferComponent } from './transfer/transfer.component';
 import { PaymemtsuccessComponent } from './paymemtsuccess/paymemtsuccess.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
+import { FundTransferServiceService } from './fund-transfer-service.service';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     RouteConfig,
     ReactiveFormsModule,FormsModule
   ],
-  providers: [],
+  providers: [ FundTransferServiceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

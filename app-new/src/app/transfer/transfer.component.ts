@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { FundTransferServiceService } from './../fund-transfer-service.service';
 
 @Component({
   selector: 'app-transfer',
@@ -18,7 +19,7 @@ export class TransferComponent implements OnInit {
 
   sub:any;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,public paymentService:FundTransferServiceService) { }
 
   ngOnInit() {
   	this.sub = this.route.params.subscribe(params => {
