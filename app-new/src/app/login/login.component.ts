@@ -16,10 +16,16 @@ export class LoginComponent implements OnInit {
 
   private errors:string=null;
   
+  textValidator(control){
+    if(control.value.length<5){
+      return {'password':true};   //true means invalid
+    }
+  }
+
   ngOnInit() {
   	 this.loginForm=new FormGroup({
-		 	userid: new FormControl("",[Validators.required,Validators.maxLength(5)]),
-		 	password: new FormControl("",Validators.required)
+		 	userid: new FormControl("",[Validators.required,Validators.maxLength(10)]),
+		 	password: new FormControl("",[Validators.required,this.textValidator])
 		 });
   }
 
@@ -34,5 +40,7 @@ export class LoginComponent implements OnInit {
  	 		this.errors="Unable to authendicate. Please try again.";
  	 	}
   }
+
+  
 
 }
