@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation,OnDestroy } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import {Router} from '@angular/router';
 import { FundTransferServiceService } from './../fund-transfer-service.service';
+import { Payment } from './../Payment';
 
 @Component({
   selector: 'app-fundtransfer',
@@ -15,15 +16,18 @@ export class FundtransferComponent implements OnInit, OnDestroy {
 
   private transferForm:FormGroup;
 
+  payment:Payment=this.paymentService.payment ;
+
+
 
   ngOnInit() {
   	this.transferForm=new FormGroup({
-		 	accno: new FormControl("",[Validators.required]),
-		 	reaccno: new FormControl("",[Validators.required]),
-		 	acctype: new FormControl("",[Validators.required]),
-		 	ifsc: new FormControl("",[Validators.required]),
-		 	name: new FormControl("",[Validators.required]),
-		 	email: new FormControl("",[Validators.required])
+		 	accno: new FormControl(this.payment.accno,[Validators.required]),
+		 	reaccno: new FormControl(this.payment.accno,[Validators.required]),
+		 	acctype: new FormControl(this.payment.acctype,[Validators.required]),
+		 	ifsc: new FormControl(this.payment.ifsc,[Validators.required]),
+		 	name: new FormControl(this.payment.name,[Validators.required]),
+		 	email: new FormControl(this.payment.email,[Validators.required])
 		 });
   }
 

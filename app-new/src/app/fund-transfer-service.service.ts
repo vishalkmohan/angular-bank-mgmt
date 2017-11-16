@@ -4,7 +4,6 @@ import { Payment } from './payment'
 @Injectable()
 export class FundTransferServiceService {
 
-  public payment:Payment;
-  constructor() { }
+  public payment:Payment= new Payment();
 
 }

@@ -12,12 +12,9 @@ export class TransferComponent implements OnInit {
 
 
   accno:string;
-  acctype:string="hiii";
-  ifsc:string="hiii";
-  name:string="hiii";
-  email:string="hiii";
-
   sub:any;
+
+  
 
   constructor(private route: ActivatedRoute,public paymentService:FundTransferServiceService) { }
 
