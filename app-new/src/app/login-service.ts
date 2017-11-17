@@ -13,8 +13,7 @@ export class LoginService {
  		return null;
  	 }
  	 
- 	return authToken;
- 	 	 
+ 
   }
 
 }
