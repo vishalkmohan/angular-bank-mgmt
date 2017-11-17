@@ -35,6 +35,7 @@
 
   <div class="container">
   <h3 style="color:rgb(245,130,31);">Your Bank Accounts List</h3>
+  <form [formGroup]="stmtForm" (ngSubmit)="miniStmt(stmtForm.value)" >
    <table class="table">
     <thead>
       <tr>
@@ -46,7 +47,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let account of accountList;">
-        <td><input type="radio" name="option"></td>
+        <td><input type="radio" name="option" formControlName="option" value="{{account.accountNo}}}" ></td>
         <td>{{account.accountType}}</td>
         <td>{{account.accountNo}}</td>
         <td>INR {{account.balance | currency}} </td>
@@ -57,5 +58,6 @@
     </tbody>
   </table>
   <hr>
-  <input style="margin-left: 1px;" *ngIf="accountList!=null && accountList.length>0" type="submit" value="VIEW MINI STATEMENT" routerLink="/bankstatement" class="btn btn-warning">
+  <input style="margin-left: 1px;" *ngIf="accountList!=null && accountList.length>0" type="submit" value="VIEW MINI STATEMENT" class="btn btn-warning">
+ </form>
   </div>

@@ -16,7 +16,7 @@ export const routes : Routes = [
 	    {path:'home',component:HomeComponent},
 	    {path:'login',component:LoginComponent},
 	    {path:'accountdetails',component:BankaccountComponent},
-	    {path:'bankstatement',component:BankstatementComponent},
+	    {path:'bankstatement/:accNo',component:BankstatementComponent},
 	    {path:'payments',component:PaymentsComponent},
 	    {path:'transfer',component:FundtransferComponent },
 	    {path:'success/:transactionId',component:PaymemtsuccessComponent },

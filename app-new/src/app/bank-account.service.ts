@@ -11,8 +11,8 @@ export class BankAccountService {
   	var account1:Account = new Account('000102927822',"Savings",11000);
   	var account2:Account = new Account('000102927344',"Current",6000);
   	//this.accountList = [new Account('000102927822',"Savings",453100)];
-  	//accountList.push(account1);
-  	//accountList.push(account2);
+  	accountList.push(account1);
+  	accountList.push(account2);
   	
   	return accountList;
   }
