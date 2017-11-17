@@ -45,19 +45,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let account of accountList;">
         <td><input type="radio" name="option"></td>
-        <td>Savings</td>
-        <td>9358257169</td>
-        <td>65000</td>
+        <td>{{account.accountType}}</td>
+        <td>{{account.accountNo}}</td>
+        <td>INR {{account.balance}} </td>
       </tr>      
-      <tr class="success">
-        <td><input type="radio" name="option"></td>
-        <td>Current</td>
-        <td>41945199514</td>
-        <td>10000</td>
-      </tr>
-      
+     
     </tbody>
   </table>
   <hr>

@@ -1,14 +1,20 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+import { BankAccountService } from './../bank-account.service';
+import { Account } from './../account';
+
 @Component({
   selector: 'app-bankaccount',
   templateUrl: './bankaccount.component.html',
   styleUrls: ['./bankaccount.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers:[BankAccountService]
 })
 export class BankaccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bankService:BankAccountService) { }
+
+  accountList: Account[] = [];
 
   ngOnInit() {
   	//local storage retrival
@@ -23,7 +29,8 @@ export class BankaccountComponent implements OnInit {
 	let nameSession = authtokenSession.name;
 	console.log("Session Storage - Auth Token:"+tokenSession + " - "+nameSession);
 
-
+  //Retriving bank deatils from service
+  this.accountList=this.bankService.getAccountDeatils();
 
   }
 

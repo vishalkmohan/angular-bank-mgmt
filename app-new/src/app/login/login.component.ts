@@ -7,7 +7,7 @@ import { LoginService } from './../login-service';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
   providers:[LoginService]
 })
 export class LoginComponent implements OnInit {
