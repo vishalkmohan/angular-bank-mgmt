@@ -58,6 +58,7 @@
     </tbody>
   </table>
   <hr>
-  <input style="margin-left: 1px;" *ngIf="accountList!=null && accountList.length>0" type="submit" value="VIEW MINI STATEMENT" class="btn btn-warning">
+  
+  <button style="margin-left: 1px;" *ngIf="accountList!=null && accountList.length>0" [disabled]="!stmtForm.value.option" type="submit" class="btn btn-warning">VIEW MINI STATEMENT</button>
  </form>
   </div>
