@@ -51,7 +51,9 @@
         <td>{{account.accountNo}}</td>
         <td>INR {{account.balance | currency}} </td>
       </tr>      
-     
+      <tr *ngIf="accountList==null || accountList.length==0" class="danger" >
+        <td colspan="4" style="text-align: center;" >No data available.</td>
+       </tr>     
     </tbody>
   </table>
   <hr>
