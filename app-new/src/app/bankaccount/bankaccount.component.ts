@@ -15,6 +15,7 @@ export class BankaccountComponent implements OnInit {
   constructor(private bankService:BankAccountService) { }
 
   accountList: Account[] = [];
+  totalBalance:number;
 
   ngOnInit() {
   	//local storage retrival
@@ -31,6 +32,8 @@ export class BankaccountComponent implements OnInit {
 
   //Retriving bank deatils from service
   this.accountList=this.bankService.getAccountDeatils();
+
+  this.totalBalance=this.accountList.map(x=>x.balance).reduce((sum, current) => sum + current);
 
   }
 
