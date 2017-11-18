@@ -20,6 +20,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { FundTransferServiceService } from './fundtransfer/fund-transfer-service.service';
 import { CommonService } from './common.service';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CommonService } from './common.service';
     FundtransferComponent,
     TransferComponent,
     PaymemtsuccessComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
