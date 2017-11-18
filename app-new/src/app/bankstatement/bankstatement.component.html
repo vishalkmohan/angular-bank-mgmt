@@ -28,10 +28,10 @@
       <div class="panel-body">
       <span style="font-size: 120%;">
         <table>
-          <tr><td>Available Balance </td><td> : </td><td> INR 2,921.60Cr.</td></tr>
-          <tr><td>Total Credits </td><td> : </td><td> INR 0.00Cr.</td></tr>
-          <tr><td>Total Debits </td><td> : </td><td> INR 0.00Cr.</td></tr>
-          <tr><td>Effective Available Balance </td><td> : </td><td> INR 2,921.60Cr.</td></tr>
+          <tr><td>Available Balance </td><td> : </td><td> {{total | currency}} Cr.</td></tr>
+          <tr><td>Total Credits </td><td> : </td><td> {{totalCr | currency}} Cr.</td></tr>
+          <tr><td>Total Debits </td><td> : </td><td> {{totalDr | currency}} Cr.</td></tr>
+          <tr><td>Effective Available Balance </td><td> : </td><td> {{total | currency}} Cr.</td></tr>
         </table>
       </span>
       </div>
@@ -53,7 +53,7 @@
         <td>{{slNo+1}} </td>
         <td>{{statement.transactionDt}}</td>
         <td>{{statement.transactionType}}.</td>
-        <td>{{statement.amount}}</td>
+        <td>{{statement.amount | currency}}</td>
       </tr>
       <tr *ngIf="statementList==null || statementList.length==0" class="danger" >
         <td colspan="4" style="text-align: center;" >No data available.</td>

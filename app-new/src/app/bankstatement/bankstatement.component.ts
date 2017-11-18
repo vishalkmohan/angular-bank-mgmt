@@ -21,6 +21,7 @@ export class BankstatementComponent implements OnInit {
    statementList: MiniStatement[] = [];
    totalCr:number=0;
    totalDr:number=0;
+   total:number=0;
 
 
   ngOnInit() {
@@ -31,6 +32,11 @@ export class BankstatementComponent implements OnInit {
 
     //Retriving mini statements from service
     this.statementList=this.statementService.getMiniStatements(this.accNo);
+
+    this.total= (this.statementList==null || this.statementList.length==0 ) ? 0:this.statementList.map(x=>x.amount).reduce((sum, current) => sum + current);
+    this.totalCr= (this.statementList==null || this.statementList.length==0 ) ? 0:this.statementList.filter(x=>x.transactionType=="Cr").map(x=>x.amount).reduce((sum, current) => sum + current);
+    this.totalDr= (this.statementList==null || this.statementList.length==0 ) ? 0:this.statementList.filter(x=>x.transactionType=="Dr").map(x=>x.amount).reduce((sum, current) => sum + current);
+
   }
 
 }
