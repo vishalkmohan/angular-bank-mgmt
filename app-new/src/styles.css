@@ -67,5 +67,8 @@
 	margin-left: 20%;
 }
 
-
-
+/*inactivate unused <a> links */
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
