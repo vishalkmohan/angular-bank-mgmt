@@ -1,15 +1,18 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { StatementService } from './statement.service';
+
 @Component({
   selector: 'app-bankstatement',
   templateUrl: './bankstatement.component.html',
   styleUrls: ['./bankstatement.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  providers:[StatementService]
 })
 export class BankstatementComponent implements OnInit {
 
-   constructor(private route: ActivatedRoute) { }
+   constructor(private route: ActivatedRoute,private statementService:StatementService) { }
 
    accNo:string;
    sub:any;
@@ -19,6 +22,8 @@ export class BankstatementComponent implements OnInit {
        this.accNo = params['accNo']; 
     });
     console.log(this.accNo);
+
+    
   }
 
 }
