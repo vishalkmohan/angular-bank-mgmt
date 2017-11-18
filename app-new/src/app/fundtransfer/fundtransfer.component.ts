@@ -38,12 +38,12 @@ export class FundtransferComponent implements OnInit, OnDestroy {
 
     //reading state list
    this.commonService.getStateList().subscribe( 
-         data => this.stateList=data ,
+         data => {this.stateList=data;console.log(data);} ,
          error => console.log("Error :- "+error ),
          () => console.log("Completed ...")
         );
 
-
+     console.log("Data : "+this.stateList);
 
 
   }
