@@ -26,6 +26,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    //just clearing session storage
+    sessionStorage.clear();
+
   	 this.loginForm = new FormGroup({
 		 	userid: new FormControl("",[Validators.required,Validators.maxLength(10)]),
 		 	password: new FormControl("",[Validators.required,this.textValidator])

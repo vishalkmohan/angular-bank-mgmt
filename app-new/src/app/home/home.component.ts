@@ -11,6 +11,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+  	//just clearing session storage
+    sessionStorage.clear();
   }
 
 }
