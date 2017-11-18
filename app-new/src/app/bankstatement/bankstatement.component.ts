@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-bankstatement',
@@ -8,9 +9,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class BankstatementComponent implements OnInit {
 
-  constructor() { }
+   constructor(private route: ActivatedRoute) { }
+
+   accNo:string;
+   sub:any;
 
   ngOnInit() {
+  	this.sub = this.route.params.subscribe(params => {
+       this.accNo = params['accNo']; 
+    });
+    console.log(this.accNo);
   }
 
 }
