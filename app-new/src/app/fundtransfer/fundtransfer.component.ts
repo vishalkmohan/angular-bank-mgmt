@@ -36,13 +36,18 @@ export class FundtransferComponent implements OnInit, OnDestroy {
 		 	email: new FormControl(this.payment.email,[Validators.required])
 		 });
 
-    //reading state list
-   this.commonService.getStateList().subscribe( 
-         data   => this.stateList=data ,
-         error  => console.log("Error :- "+error ),
-         ()     => console.log("Completed ...")
-        );
+    // //reading state list
+    // this.commonService.getStateList().subscribe( 
+    //      data   => this.stateList=data ,
+    //      error  => console.log("Error :- "+error ),
+    //      ()     => console.log("Completed ...")
+    //     );
 
+    //reading state list
+    this.commonService.getStateListByPromise().then( 
+         data   => this.stateList=data 
+        ).catch(error =>  console.log(error) );
+    console.log(this.stateList);
 
   }
 
