@@ -17,7 +17,7 @@ import { TransferComponent } from './transfer/transfer.component';
 import { PaymemtsuccessComponent } from './paymemtsuccess/paymemtsuccess.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
-import { FundTransferServiceService } from './fund-transfer-service.service';
+import { FundTransferServiceService } from './fundtransfer/fund-transfer-service.service';
 
 
 @NgModule({

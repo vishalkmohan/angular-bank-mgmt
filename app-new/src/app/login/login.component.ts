@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import {Router} from '@angular/router';
-import { LoginService } from './../login-service';
+import { LoginService } from './login-service';
 
 @Component({
   selector: 'app-login',

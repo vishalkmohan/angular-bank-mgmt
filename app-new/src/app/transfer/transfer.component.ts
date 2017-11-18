@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute ,Router} from '@angular/router';
-import { FundTransferServiceService } from './../fund-transfer-service.service';
+import { FundTransferServiceService } from './../fundtransfer/fund-transfer-service.service';
 
 @Component({
   selector: 'app-transfer',

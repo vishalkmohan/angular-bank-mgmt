@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute ,Router} from '@angular/router';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 
-import { BankAccountService } from './../bank-account.service';
+import { BankAccountService } from './bank-account.service';
 import { Account } from './../account';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation,OnDestroy } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import {Router} from '@angular/router';
-import { FundTransferServiceService } from './../fund-transfer-service.service';
+import { FundTransferServiceService } from './fund-transfer-service.service';
 import { Payment } from './../Payment';
 
 @Component({
