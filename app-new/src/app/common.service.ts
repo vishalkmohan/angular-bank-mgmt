@@ -7,7 +7,7 @@ import { State } from './domain/state'
 export class CommonService {
 
   constructor(private http:HttpClient) { }
-  stateUrl:string="https://restcountries.eu/rest/v2/all";
+  stateUrl:string="https://restcountries.eu/rest/v2/all1";
 
   getStateList(){
 	return	this.http.get<State[]>(this.stateUrl);
