@@ -24,6 +24,7 @@ export class FundtransferComponent implements OnInit, OnDestroy {
   	this.transferForm=new FormGroup({
 		 	accno: new FormControl(this.payment.accno,[Validators.required]),
 		 	reaccno: new FormControl(this.payment.accno,[Validators.required]),
+      amount: new FormControl(this.payment.amount,[Validators.required]),
 		 	acctype: new FormControl(this.payment.acctype,[Validators.required]),
 		 	ifsc: new FormControl(this.payment.ifsc,[Validators.required]),
 		 	name: new FormControl(this.payment.name,[Validators.required]),

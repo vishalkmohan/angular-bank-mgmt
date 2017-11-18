@@ -5,5 +5,6 @@ export class Payment{
   ifsc:string;
   name:string;
   email:string;
+  amount:number;
   
 }

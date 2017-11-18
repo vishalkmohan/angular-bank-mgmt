@@ -17,6 +17,7 @@ export class TransferComponent {
   constructor(public paymentService:FundTransferServiceService,private urlRouter:Router) { }  
 
   submitPayment=function(){    
+    console.log(this.paymentService.payment);
     this.urlRouter.navigate(['/success', this.transactionId]);
   }
 
