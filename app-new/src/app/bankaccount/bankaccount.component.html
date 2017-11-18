@@ -47,7 +47,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let account of accountList;">
-        <td><input type="radio" name="option" formControlName="option" value="{{account.accountNo}}}" ></td>
+        <td><input type="radio" name="option" formControlName="option" value="{{account.accountNo}}" ></td>
         <td>{{account.accountType}}</td>
         <td>{{account.accountNo}}</td>
         <td>INR {{account.balance | currency}} </td>
