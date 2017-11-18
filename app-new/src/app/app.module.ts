@@ -21,6 +21,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { FundTransferServiceService } from './fundtransfer/fund-transfer-service.service';
 import { CommonService } from './common.service';
 import { HeaderComponent } from './header/header.component';
+import { AuthGuardService } from './config/auth-guard.service';
+import { AuthService } from './config/auth.service';
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import { HeaderComponent } from './header/header.component';
     RouteConfig,
     ReactiveFormsModule,FormsModule,HttpClientModule
   ],
-  providers: [ FundTransferServiceService,CommonService ],
+  providers: [ FundTransferServiceService,CommonService,AuthGuardService,AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

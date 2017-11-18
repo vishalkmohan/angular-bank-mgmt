@@ -22,26 +22,15 @@ export class BankaccountComponent implements OnInit {
     public stmtForm:FormGroup;
 
   ngOnInit() {
-  	//local storage retrival
-  	let authtokenLocal = JSON.parse(localStorage.getItem('authtoken'));
-	let tokenLocal = authtokenLocal.token; // your token
-	let nameLocal = authtokenLocal.name;
-	console.log("Local Storage - Auth Token:"+tokenLocal + " - "+nameLocal);
 
-	//session storage retrival
-	let authtokenSession = JSON.parse(sessionStorage.getItem('authtoken'));
-	let tokenSession = authtokenSession.token; // your token
-	let nameSession = authtokenSession.name;
-	console.log("Session Storage - Auth Token:"+tokenSession + " - "+nameSession);
+        //Retriving bank deatils from service
+        this.accountList=this.bankService.getAccountDeatils();
 
-  //Retriving bank deatils from service
-  this.accountList=this.bankService.getAccountDeatils();
+        this.totalBalance= (this.accountList==null || this.accountList.length==0 ) ? 0:this.accountList.map(x=>x.balance).reduce((sum, current) => sum + current);
 
-  this.totalBalance= (this.accountList==null || this.accountList.length==0 ) ? 0:this.accountList.map(x=>x.balance).reduce((sum, current) => sum + current);
-
-  this.stmtForm = new FormGroup({
-       option: new FormControl()
-     });
+        this.stmtForm = new FormGroup({
+             option: new FormControl()
+           });
 
   }
 

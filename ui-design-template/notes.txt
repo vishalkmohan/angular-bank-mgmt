@@ -23,3 +23,6 @@ https://alligator.io/angular/httpclient-intro/
 
 Multiple Http req; one after another :
 https://coryrylan.com/blog/angular-multiple-http-requests-with-rxjs
+
+Router authendication:
+https://medium.com/@ryanchenkie_40935/angular-authentication-using-route-guards-bf7a4ca13ae3

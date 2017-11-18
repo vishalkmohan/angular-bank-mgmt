@@ -11,16 +11,17 @@ import { FundtransferComponent } from './../fundtransfer/fundtransfer.component'
 import { TransferComponent } from './../transfer/transfer.component';
 import { PaymemtsuccessComponent } from './../paymemtsuccess/paymemtsuccess.component';
 import { PagenotfoundComponent } from './../pagenotfound/pagenotfound.component';
+import { AuthGuardService } from './auth-guard.service';
 
 export const routes : Routes = [
 	    {path:'home',component:HomeComponent},
 	    {path:'login',component:LoginComponent},
-	    {path:'accountdetails',component:BankaccountComponent},
-	    {path:'bankstatement/:accNo',component:BankstatementComponent},
-	    {path:'payments',component:PaymentsComponent},
-	    {path:'transfer',component:FundtransferComponent },
-	    {path:'success/:transactionId',component:PaymemtsuccessComponent },
-	    {path:'transferview',component:TransferComponent },
+	    {path:'accountdetails',component:BankaccountComponent, canActivate: [AuthGuardService]},
+	    {path:'bankstatement/:accNo',component:BankstatementComponent, canActivate: [AuthGuardService]},
+	    {path:'payments',component:PaymentsComponent, canActivate: [AuthGuardService]},
+	    {path:'transfer',component:FundtransferComponent, canActivate: [AuthGuardService] },
+	    {path:'success/:transactionId',component:PaymemtsuccessComponent, canActivate: [AuthGuardService] },
+	    {path:'transferview',component:TransferComponent, canActivate: [AuthGuardService] },
 	    {path:'', redirectTo:'/home', pathMatch: 'full'},
 	    {path:'**', component:PagenotfoundComponent }
 	  ];

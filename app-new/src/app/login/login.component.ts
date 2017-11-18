@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
  	 	if(this.authToken!=null){
  	 		console.log("Login Success....");
        		//local storage-browser scope
-	       localStorage.setItem('authtoken ', JSON.stringify({ token: this.authToken, name: loginDeatils.userid }));
+	       //localStorage.setItem('authtoken ', JSON.stringify({ token: this.authToken, name: loginDeatils.userid }));
 	       //session storage- tab scope
 	       sessionStorage.setItem('authtoken', JSON.stringify({ token: this.authToken, name: loginDeatils.userid }));
 	       
