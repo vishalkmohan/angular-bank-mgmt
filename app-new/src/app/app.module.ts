@@ -23,6 +23,7 @@ import { CommonService } from './common.service';
 import { HeaderComponent } from './header/header.component';
 import { AuthGuardService } from './config/auth-guard.service';
 import { AuthService } from './config/auth.service';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AuthService } from './config/auth.service';
     TransferComponent,
     PaymemtsuccessComponent,
     PagenotfoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

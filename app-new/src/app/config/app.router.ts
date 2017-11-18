@@ -4,6 +4,7 @@ import { ModuleWithProviders } from '@angular/core';
 
 import { HomeComponent } from './../home/home.component';
 import { LoginComponent } from './../login/login.component';
+import { LogoutComponent } from './../logout/logout.component';
 import { BankaccountComponent } from './../bankaccount/bankaccount.component';
 import { BankstatementComponent } from './../bankstatement/bankstatement.component';
 import { PaymentsComponent } from './../payments/payments.component';
@@ -16,6 +17,7 @@ import { AuthGuardService } from './auth-guard.service';
 export const routes : Routes = [
 	    {path:'home',component:HomeComponent},
 	    {path:'login',component:LoginComponent},
+	    {path:'logout',component:LogoutComponent},
 	    {path:'accountdetails',component:BankaccountComponent, canActivate: [AuthGuardService]},
 	    {path:'bankstatement/:accNo',component:BankstatementComponent, canActivate: [AuthGuardService]},
 	    {path:'payments',component:PaymentsComponent, canActivate: [AuthGuardService]},
