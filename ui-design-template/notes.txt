@@ -18,5 +18,8 @@ command
 =>ng buld --prod
 => gulp war 
 
-HttpClient 4.3
+HttpClient 4.3 :
 https://alligator.io/angular/httpclient-intro/
+
+Multiple Http req; one after another :
+https://coryrylan.com/blog/angular-multiple-http-requests-with-rxjs
