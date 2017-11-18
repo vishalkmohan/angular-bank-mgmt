@@ -22,7 +22,8 @@
   
 <div class="container">
 <h3 style="color:rgb(245,130,31);">Fund Transfer</h3>
-    <div class="panel panel-default">    
+
+    <div class="panel panel-default" *ngIf="errorPaymentMsg==null" >    
       <div class="panel-heading"><b>Your linked ICICI Bank account / Pockets wallet</b></div>
       <div class="panel-body">
       <span style="font-size: 120%;">
@@ -38,4 +39,13 @@
       </span>
       </div>
     </div>
+    <!-- Unable to submit payment -->
+    <div class="panel panel-default" *ngIf="errorPaymentMsg!=null" >    
+      <div class="panel-body">
+      <span style="font-size: 120%;color: red;">
+        {{errorPaymentMsg}}
+      </span>
+      </div>
+    </div>
+
   </div>

@@ -12,13 +12,25 @@ export class TransferComponent {
 
   accno:string;
   sub:any;
-  transactionId:string="TRN1111";  
+  transactionId:string=null;  
+  errorPaymentMsg:string=null;
 
   constructor(public paymentService:FundTransferServiceService,private urlRouter:Router) { }  
 
-  submitPayment=function(){    
+  submitPayment=function(){  
+
     console.log(this.paymentService.payment);
-    this.urlRouter.navigate(['/success', this.transactionId]);
+
+    this.transactionId=this.paymentService.transferPayment();
+    if(this.transactionId!=null){
+      //payment success
+       this.urlRouter.navigate(['/success', this.transactionId]);
+    }else{
+      //Payment failed
+      this.errorPaymentMsg="Sorry, We are unable to process your payment. Please contact administrator";
+    }
+
+    
   }
 
 }
