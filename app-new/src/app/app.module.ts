@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouteConfig} from './app.router';
+import { RouteConfig} from './config/app.router';
  import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
