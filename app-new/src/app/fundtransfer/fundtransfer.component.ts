@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation,OnDestroy } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import {Router} from '@angular/router';
 import { FundTransferServiceService } from './fund-transfer-service.service';
-import { Payment } from './../Payment';
+import { Payment } from './../domain/payment';
 
 @Component({
   selector: 'app-fundtransfer',

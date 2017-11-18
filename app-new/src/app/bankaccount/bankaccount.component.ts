@@ -3,7 +3,7 @@ import { ActivatedRoute ,Router} from '@angular/router';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 
 import { BankAccountService } from './bank-account.service';
-import { Account } from './../account';
+import { Account } from './../domain/account';
 
 @Component({
   selector: 'app-bankaccount',

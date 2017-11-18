@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Account } from './../account';
+import { Account } from './../domain/account';
 
 @Injectable()
 export class BankAccountService {
