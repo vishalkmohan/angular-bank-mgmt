@@ -18,6 +18,7 @@ import { PaymemtsuccessComponent } from './paymemtsuccess/paymemtsuccess.compone
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { FundTransferServiceService } from './fundtransfer/fund-transfer-service.service';
+import { CommonService } from './common.service';
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { FundTransferServiceService } from './fundtransfer/fund-transfer-service
     RouteConfig,
     ReactiveFormsModule,FormsModule
   ],
-  providers: [ FundTransferServiceService ],
+  providers: [ FundTransferServiceService,CommonService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

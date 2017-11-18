@@ -38,6 +38,11 @@
               <option>Current</option>
             </select>
           </td></tr>
+           <tr><td>State </td><td>
+            <select formControlName="state" name="state">
+              <option *ngFor ="let state of stateList" >{{state}}</option>
+            </select>
+          </td></tr>
           <tr><td>IFSC Code </td><td><input type="text" name="ifsc" placeholder="IFSC" formControlName="ifsc" ></td></tr>
           <tr><td>Beneficiary Name </td><td><input type="text" name="name" placeholder="Name" formControlName="name" ></td></tr>
           <tr><td>Email ID </td><td><input type="text" name="email" placeholder="Email" formControlName="email" ></td></tr>
