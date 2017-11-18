@@ -24,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
 import { AuthGuardService } from './config/auth-guard.service';
 import { AuthService } from './config/auth.service';
 import { LogoutComponent } from './logout/logout.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { LogoutComponent } from './logout/logout.component';
     PaymemtsuccessComponent,
     PagenotfoundComponent,
     HeaderComponent,
-    LogoutComponent
+    LogoutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+
+
+footer {
+    color: white;
+    background-color: #053c6d;
+    clear: left;
+    text-align: center;
+    height: 225px;
+    margin: 0 auto;
+    position: absolute;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+}
+
+.footernews {
+    color: white;
+    background-color: rgb(245,130,31);;
+    clear: left;
+    text-align: center;
+    height: 25px;
+    margin: 0 auto;
+  	right: 0;
+  	bottom: 0;
+  	left: 0;
+}
