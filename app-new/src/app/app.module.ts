@@ -5,6 +5,7 @@ import { RouteConfig} from './app.router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { RouterModule, Router }   from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -37,7 +38,7 @@ import { CommonService } from './common.service';
   imports: [
     BrowserModule,
     RouteConfig,
-    ReactiveFormsModule,FormsModule
+    ReactiveFormsModule,FormsModule,HttpClientModule
   ],
   providers: [ FundTransferServiceService,CommonService ],
   bootstrap: [AppComponent]

@@ -38,9 +38,9 @@
               <option>Current</option>
             </select>
           </td></tr>
-           <tr><td>State </td><td>
+           <tr><td>Country </td><td>
             <select formControlName="state" name="state">
-              <option *ngFor ="let state of stateList" >{{state}}</option>
+              <option *ngFor ="let state of stateList" >{{state.name}}</option>
             </select>
           </td></tr>
           <tr><td>IFSC Code </td><td><input type="text" name="ifsc" placeholder="IFSC" formControlName="ifsc" ></td></tr>

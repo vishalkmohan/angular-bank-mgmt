@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import { FundTransferServiceService } from './fund-transfer-service.service';
 import { Payment } from './../domain/payment';
 import { CommonService } from './../common.service';
+import { State } from './../domain/state'
 
 @Component({
   selector: 'app-fundtransfer',
@@ -17,10 +18,10 @@ export class FundtransferComponent implements OnInit, OnDestroy {
 
   public transferForm:FormGroup;
 
-  stateList:string[];
+  stateList:State[];
 
   payment:Payment=this.paymentService.payment ;
-
+  id:string;
 
 
   ngOnInit() {
@@ -35,7 +36,9 @@ export class FundtransferComponent implements OnInit, OnDestroy {
 		 	email: new FormControl(this.payment.email,[Validators.required])
 		 });
 
-    this.stateList=this.commonService.getStateList();
+
+   this.commonService.getStateList().subscribe( x=> this.stateList=x );
+
 
   }
 
