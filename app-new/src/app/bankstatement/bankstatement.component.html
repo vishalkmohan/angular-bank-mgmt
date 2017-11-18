@@ -49,30 +49,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr class="success">
-        <td>1</td>
-        <td>10/11/2017</td>
-        <td>Cr.</td>
-        <td>65000</td>
-      </tr>      
-      <tr class="info">
-        <td>2</td>
-        <td>10/11/2017</td>
-        <td>Dr.</td>
-        <td>1000</td>
+      <tr *ngFor='let statement of statementList;let slNo = index;' >
+        <td>{{slNo+1}} </td>
+        <td>{{statement.transactionDt}}</td>
+        <td>{{statement.transactionType}}.</td>
+        <td>{{statement.amount}}</td>
       </tr>
-      <tr class="success">
-        <td>3</td>
-        <td>10/11/2017</td>
-        <td>Cr.</td>
-        <td>80000</td>
-      </tr>
-      <tr class="info">
-        <td>2</td>
-        <td>10/11/2017</td>
-        <td>Cr.</td>
-        <td>100</td>
-      </tr>
+      <tr *ngIf="statementList==null || statementList.length==0" class="danger" >
+        <td colspan="4" style="text-align: center;" >No data available.</td>
+       </tr>   
     </tbody>
   </table>
   <hr>

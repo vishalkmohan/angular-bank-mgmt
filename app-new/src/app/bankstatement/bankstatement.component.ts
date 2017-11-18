@@ -30,7 +30,7 @@ export class BankstatementComponent implements OnInit {
     console.log(this.accNo);
 
     //Retriving mini statements from service
-
+    this.statementList=this.statementService.getMiniStatements(this.accNo);
   }
 
 }
