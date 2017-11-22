@@ -48,7 +48,7 @@ import { FooterComponent } from './footer/footer.component';
     RouteConfig,
     ReactiveFormsModule,FormsModule,HttpClientModule
   ],
-  providers: [ FundTransferServiceService,CommonService,AuthGuardService,AuthService ],
+  providers: [FundTransferServiceService,CommonService,AuthGuardService,AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
