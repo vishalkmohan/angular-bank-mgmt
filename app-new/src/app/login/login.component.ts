@@ -43,10 +43,8 @@ export class LoginComponent implements OnInit {
  	 	console.log("User Deatails : "+loginDeatils.userid +":"+loginDeatils.password);
  	 	
  	 	this.loginService.authendicate(loginDeatils).subscribe( 
-          data   => { 
-            this.loginSuccess(data);
-          },
-          error  => console.log("Error :- "+error ),
+          data   => this.loginSuccess(data),
+          error  => this.loginFailed(error),
           ()     => console.log("Request Completed ...")
          );
  	 	
@@ -62,10 +60,12 @@ export class LoginComponent implements OnInit {
          sessionStorage.setItem('authtoken', JSON.stringify({ token: tokenResponse.token, name: tokenResponse.user.username }));
          
          this.router.navigateByUrl('/accountdetails');
-      } else{
-        console.log("Login Failed....");
-        this.errors="Unable to authendicate. Please try again.";
       }
+  }
+
+  loginFailed(error){
+    console.log("Login Failed....");
+    this.errors="Unable to authendicate. Please try again.";
   }
 
 }
